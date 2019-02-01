@@ -2,6 +2,7 @@ package edu.fleming.daw.naipes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 public class Mazo {
 
@@ -75,9 +76,12 @@ public class Mazo {
 		naipes.removeAll(naipes);
 	}
 	
-	public Naipe getNaipe() {
-		System.out.println(naipes.get(0));
-		return null;
+	public static Naipe getNaipe() {
+		Random rn = new Random();
+		int r = rn.nextInt(53);
+		//System.out.println(naipes.get(r));
+//		naipes.remove(r);
+		return naipes.remove(r);
 	}
 	
 	
@@ -85,6 +89,7 @@ public class Mazo {
 	public static void main(String[] args) {
 	 LlenarMazo();
 	 System.out.println(naipes);
+	 System.out.println(getNaipe());
 	 VaciarMazo();
 	 System.out.print(naipes);
 	}

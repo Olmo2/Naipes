@@ -13,7 +13,10 @@ public class Naipe {
 	}
 	@Override
 	public String toString() {
-		return String.format(" El " + id +" De "+ palo + "\n");
+		if(id ==Id.J || id ==Id.Q || id ==Id.K ) {
+			return String.format(" La " + id +" De "+ palo + "\n");
+		}else 
+			return String.format(" El " + id +" De "+ palo + "\n");
 	}
 
 
